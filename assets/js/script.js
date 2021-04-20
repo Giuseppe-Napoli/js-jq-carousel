@@ -4,7 +4,20 @@ $(function(){
   $('.arrow_dx').click(nextImg);
   
   $('.arrow_sx').click(precImg);
-
+  
+  //<<<<<<BONUS>>>>>>//
+ // creo una var per stabilire la lunghezza della mia lista d'immagini
+  var listImg = $('.album img');
+ 
+//creo un ciclo che aggiunge un 'i' al contenitore 'indicator' per ogni immagine fino a quando il ciclo termina 
+  for (var i = 0; i < listImg.length; i++) {
+    if (i == 0) {
+      $('.indicator').append('<i class="active far fa-circle"></i>');
+    } else {
+      $('.indicator').append('<i class="far fa-circle"></i>');
+    }
+  }
+  //<<<<<<BONUS>>>>>>//
   ///////////////////////////////////////
   //funzione avanti
   function nextImg(){
